@@ -66,7 +66,6 @@ const FooterSection = () => {
               <li>Process</li>
               <li>Portpolio</li>
               <li>Apply</li>
-              <li>International Applicants</li>
             </ul>
           </div>
 
@@ -77,7 +76,6 @@ const FooterSection = () => {
               <li>Apply for Funding</li>
               <li>Schedule a Call</li>
               <li>Join Our Network</li>
-              <li>Student Stories</li>
             </ul>
           </div>
 
@@ -103,7 +101,6 @@ const FooterSection = () => {
 
         {/* BOTTOM BAR */}
         <div className="footer-bottom">
-          <p>© 2026 JAIN University - All rights reserved</p>
 
           <div className="bottom-links">
             <span>Terms & Conditions</span>
