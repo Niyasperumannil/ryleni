@@ -1,0 +1,196 @@
+/* ================= GLOBAL RESET ================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ================= SECTION ================= */
+
+.process-section {
+  width: 100%;
+  padding: 120px 0;
+  background: #000;
+}
+
+/* ================= CONTAINER ================= */
+
+.process-container {
+  width: 1400px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+
+.process-top {
+  margin-bottom: 80px;
+}
+
+.process-tag {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.process-tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 30px;
+  height: 3px;
+  background: #3b82f6;
+  transform: translateY(-50%);
+}
+
+.process-title {
+  font-family: Unbounded, sans-serif;
+  font-size: 63.2294px;
+  font-weight: 700;
+  line-height: 63.2294px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.process-subtitle {
+  font-family: Inter, "Inter Fallback";
+  font-size: 15.8074px;
+  font-weight: 400;
+  line-height: 26.8725px;
+  max-width: 600px;
+  opacity: 0.8;
+}
+
+/* ================= PROCESS GRID ================= */
+
+.process-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(233, 220, 220, 0.15);
+}
+
+.process-card {
+  padding: 60px 40px;
+  border-right: 1px solid rgba(208, 205, 205, 0.15);
+  position: relative;
+  min-height: 320px;
+  transition: 0.3s ease;
+}
+
+.process-card:last-child {
+  border-right: none;
+}
+
+/* Step Number */
+
+.step-number {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 72px;
+  font-weight: 300;
+  opacity: 0.08;
+  font-family: Unbounded, sans-serif;
+}
+
+/* Card Title */
+
+.process-card h3 {
+  font-family: Unbounded, "Unbounded Fallback";
+  font-size: 36.3569px;
+  font-weight: 300;
+  line-height: 43.6283px;
+  margin-bottom: 20px;
+}
+
+/* Card Description */
+
+.process-card p {
+  font-family: Inter, "Inter Fallback";
+  font-size: 15.8074px;
+  font-weight: 400;
+  line-height: 26.8725px;
+  opacity: 0.8;
+}
+
+/* ================= CTA ================= */
+
+.process-cta {
+  margin-top: 60px;
+}
+
+.process-btn {
+  background: #ffcc00;
+  color: #000;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.process-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .process-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-card:nth-child(2),
+  .process-card:nth-child(4) {
+    border-right: none;
+  }
+
+  .process-card {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .process-card:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .process-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .process-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .process-card {
+    border-right: none;
+  }
+
+  .step-number {
+    font-size: 50px;
+  }
+}

@@ -1,0 +1,249 @@
+/* ================= GLOBAL RESET ================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* ================= HERO ================= */
+
+.jain-hero {
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* ================= VIDEO ================= */
+
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* ================= OVERLAY ================= */
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.1) 30%,
+    rgba(0,0,0,0.7) 95%
+  );
+  z-index: 1;
+}
+
+/* ================= HEADING ================= */
+
+.hero-content {
+  position: absolute;
+  bottom: 220px;
+  left: 80px;
+  z-index: 3;
+  max-width: 80%;
+}
+
+.hero-title {
+  font-family: Unbounded, "Unbounded Fallback";
+  font-size: 82.1983px;
+  font-weight: 800;
+  line-height: 82.1983px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: fadeText 1s ease-in-out;
+}
+
+/* TEXT FADE ANIMATION */
+
+@keyframes fadeText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= SLIDER ================= */
+
+.hero-slider {
+  position: absolute;
+  right: 80px;
+  bottom: 220px;
+  text-align: right;
+  z-index: 3;
+}
+
+.slider-count {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.slider-dots span {
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  opacity: 0.4;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.slider-dots span.active {
+  opacity: 1;
+}
+
+.slider-dots .play {
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  clip-path: polygon(30% 20%, 30% 80%, 80% 50%);
+  border-radius: 50%;
+  opacity: 1;
+}
+
+/* ================= BOTTOM STRIP ================= */
+
+.hero-bottom {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 5%;
+  z-index: 3;
+  flex-wrap: wrap;
+}
+
+.hero-bottom div {
+  width: 25%;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  padding-top: 15px;
+  font-family: Inter, "Inter Fallback";
+  font-size: 15.8074px;
+  font-weight: 500;
+  line-height: 18.9688px;
+  color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: -10rem;
+  }
+
+  .hero-content {
+    left: 40px;
+    bottom: 250px;
+  }
+
+  .hero-slider {
+    right: 40px;
+    bottom: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .jain-hero {
+    height: 91vh;
+  }
+
+  .hero-content {
+    left: 25px;
+    bottom: 160px;
+    max-width: 90%;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .hero-slider {
+    right: 25px;
+    bottom: 160px;
+  }
+
+  .slider-count {
+    font-size: 28px;
+  }
+
+  .slider-dots span {
+    width: 10px;
+    height: 10px;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 25px;
+    bottom: 30px;
+  }
+
+  .hero-bottom div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 38px;
+
+  }
+
+  .slider-count {
+    font-size: 22px;
+  }
+
+  .hero-content {
+    bottom: 160px;
+  }
+
+  .hero-slider {
+    bottom: 160px;
+  }
+}

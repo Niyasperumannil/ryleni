@@ -1,0 +1,252 @@
+/* ================= GLOBAL RESET ================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #0a0f1c;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ================= SECTION ================= */
+
+.who-section {
+  width: 100%;
+  padding: 7.5rem 0; /* 120px */
+  background: linear-gradient(135deg, #000000 0%, #000000 100%);
+  overflow: hidden;
+}
+
+/* ================= CONTAINER ================= */
+
+.who-container {
+  width: 1400px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem; /* 80px */
+}
+
+/* ================= LEFT ================= */
+
+.who-left {
+  width: 50%;
+  margin-top: 5rem;
+}
+
+.who-label {
+  font-family: Inter, "Inter Fallback";
+  font-size: 25.2918px;
+  font-weight: 500;
+  line-height: 30.7116px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.who-heading {
+  font-family: Unbounded, "Unbounded Fallback";
+  font-size: 36.3569px;
+  font-weight: 300;
+  line-height: 43.6283px;
+  color: #ffffff;
+  margin: 1.5rem 0;
+}
+
+.who-description {
+  font-family: Inter, "Inter Fallback";
+  font-size: 15.8074px;
+  font-weight: 400;
+  line-height: 26.8725px;
+  color: #ffffff;
+  max-width: 90%;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.who-points {
+  list-style: none;
+}
+
+.who-points li {
+  font-family: Inter, "Inter Fallback";
+  font-size: 18.9688px;
+  font-weight: 400;
+  line-height: 26.5564px;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.who-points li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00bfff;
+  font-size: 1rem;
+}
+
+/* ================= RIGHT ================= */
+
+.who-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-right: 5rem;
+  margin-top: -5rem;
+}
+
+/* Tall Semi Circle Panel */
+
+.who-arch {
+  width: 100%;
+  height: 400px;
+  border-radius: 260px 260px 20px 20px;
+  overflow: hidden;
+  border: 3px solid #00bfff;
+}
+
+.who-arch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Small Images */
+
+.who-small-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.who-small {
+  width: 50%;
+  height: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #00bfff;
+}
+
+.who-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+
+  .who-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .who-left,
+  .who-right {
+    width: 100%;
+  }
+
+  .who-heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .who-small-wrapper {
+    gap: 1.5rem;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .who-section {
+    padding: 4rem 0;
+  }
+
+  .who-left {
+    width: 90%;
+    margin-top: -1rem;
+  }
+
+  .who-right {
+    width: 100%;
+    margin-top: -1rem;
+    margin-left: 5rem;
+  }
+
+  .who-heading {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .who-description {
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+  }
+
+  .who-small-wrapper {
+    flex-direction: column;
+  }
+
+  .who-small {
+    width: 100%;
+  }
+
+  .who-arch {
+    height: 400px;
+    border-radius: 200px 200px 20px 20px;
+  }
+}
+
+/* ================= SCROLL REVEAL ANIMATION ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 1s ease;
+}
+
+/* Trigger when visible */
+
+.who-section.show .reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.who-section.show .reveal-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger Delays */
+
+.reveal-1 { transition-delay: 0.2s; }
+.reveal-2 { transition-delay: 0.4s; }
+.reveal-3 { transition-delay: 0.6s; }
+.reveal-4 { transition-delay: 0.8s; }

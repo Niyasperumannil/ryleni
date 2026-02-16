@@ -1,0 +1,213 @@
+/* ================= GLOBAL RESET ================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ================= SECTION ================= */
+
+.admissions-section {
+  width: 100%;
+  padding: 2.5rem 0;
+  background: #000;
+}
+
+/* ================= CONTAINER ================= */
+
+.admissions-container {
+  width: 1400px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* ================= HERO SPLIT ================= */
+
+.admissions-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+.hero-left,
+.hero-right {
+  width: 50%;
+}
+
+/* ================= TEXT STYLES ================= */
+
+.admissions-title {
+  font-family: Unbounded, sans-serif;
+  font-size: 63.2294px;
+  font-weight: 700;
+  line-height: 63.2294px;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #00c6ff, #f9ff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.admissions-desc {
+  font-family: Inter, "Inter Fallback";
+font-size: 15.8074px;
+font-weight: 400;
+line-height: 26.8725px;
+color: rgb(255, 255, 255);
+  max-width: 80%;
+  margin-bottom: 2rem;
+}
+
+.admissions-btn {
+  background: #ffcc00;
+  color: #000;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admissions-btn:hover {
+  transform: translateY(-2px);
+}
+
+.entrance-title {
+  font-family: Unbounded, "Unbounded Fallback";
+font-size: 36.3569px;
+font-weight: 300;
+line-height: 43.6283px;
+color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+
+.entrance-desc {
+  font-family: Inter, "Inter Fallback";
+font-size: 15.8074px;
+font-weight: 400;
+line-height: 26.8725px;
+color: rgb(255, 255, 255);
+  max-width: 85%;
+}
+
+/* ================= CARDS ================= */
+
+.admissions-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.admission-card {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.admission-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.admission-card:hover img {
+  transform: scale(1.08);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  transition: 0.4s ease;
+}
+
+.card-overlay h4 {
+  font-size: 18.9688px;
+  font-weight: 500;
+}
+
+.card-hover-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  margin-top: 0.8rem;
+}
+
+.card-hover-content p {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 0.8rem;
+}
+
+.learn-more {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4da6ff;
+}
+
+.admission-card:hover .card-hover-content {
+  opacity: 1;
+  max-height: 200px;
+}
+
+.admission-card:hover .card-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4));
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+
+  .admissions-hero {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .admissions-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .admissions-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .admission-card {
+    height: 350px;
+  }
+
+  /* Show content always on mobile */
+  .card-hover-content {
+    opacity: 1;
+    max-height: none;
+  }
+}

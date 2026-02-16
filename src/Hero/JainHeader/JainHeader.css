@@ -1,0 +1,190 @@
+/* ================= GLOBAL RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+/* ================= HEADER ================= */
+
+.jain-header {
+  width: 100%;
+  background: rgb(0, 0, 0);
+  padding: 18px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.jain-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================= LOGO ================= */
+
+.jain-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.jain-logo img {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ================= NAV LINKS ================= */
+
+.jain-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.jain-links a {
+  font-family: Inter, "Inter Fallback";
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.jain-links a:hover {
+  color: #1a3fa3;
+}
+
+/* ================= ICONS ================= */
+
+.jain-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-icon {
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1001;
+}
+
+/* ================= APPLY BUTTON ================= */
+
+.apply-btn {
+  color: #ffffff;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.apply-btn:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+/* Hide Apply Button Inside Mobile Nav */
+@media (max-width: 1024px) {
+  .apply-btn {
+    display: none;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+.mobile-overlay {
+  display: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+
+  .jain-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #000;
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 30px;
+    transition: 0.4s ease-in-out;
+    z-index: 999;
+  }
+
+  .jain-links a {
+    color: #ffffff;
+    font-size: 16px;
+  }
+
+  .jain-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 998;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .logo-text {
+    font-size: 12px;
+  }
+
+  .jain-logo img {
+    width: 32px;
+  }
+}
