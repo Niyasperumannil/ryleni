@@ -12,10 +12,9 @@ const JainHeader = () => {
         {/* LEFT LOGO + NAME */}
         <div className="jain-logo">
           <img
-            src="https://ryleni.com/assets/white-ico-mRDQACV7.jpg"
+            src="/logo.png"
             alt="Ryleni"
           />
-          <span className="logo-text">Ryleni</span>
         </div>
 
         {/* NAV LINKS */}

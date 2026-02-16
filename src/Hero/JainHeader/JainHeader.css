@@ -46,11 +46,13 @@ body {
 .jain-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1px;  
+  margin-top: -2rem;   
+  margin-bottom: -2rem;
 }
 
 .jain-logo img {
-  width: 40px;
+  width: 100px;
   height: auto;
   object-fit: contain;
 }
