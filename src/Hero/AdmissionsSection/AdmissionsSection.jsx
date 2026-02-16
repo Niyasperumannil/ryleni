@@ -43,7 +43,7 @@ const AdmissionsSection = () => {
         <div className="admissions-cards">
 
           <div className="admission-card">
-            <img src="https://ryleni.com/assets/tech-fintech-CIFDcOl-.jpg" alt="Venture Building" />
+            <img src="https://i.pinimg.com/736x/ef/e8/ef/efe8efb0bf9d554aff9660e0713a8108.jpg" alt="Venture Building" />
             <div className="card-overlay">
               <h4>Venture Building</h4>
               <div className="card-hover-content">
@@ -56,7 +56,7 @@ const AdmissionsSection = () => {
           </div>
 
           <div className="admission-card">
-            <img src="https://ryleni.com/assets/tech-fintech-CIFDcOl-.jpg" alt="Capital Investment" />
+            <img src="https://i.pinimg.com/1200x/bb/b0/4c/bbb04c3d04be186be7354bb961c50616.jpg" alt="Capital Investment" />
             <div className="card-overlay">
               <h4>Capital Investment</h4>
               <div className="card-hover-content">
@@ -69,7 +69,7 @@ const AdmissionsSection = () => {
           </div>
 
           <div className="admission-card">
-            <img src="https://ryleni.com/assets/tech-fintech-CIFDcOl-.jpg" alt="Strategic Support" />
+            <img src="https://i.pinimg.com/1200x/b1/4c/c1/b14cc161cce4383a47cfaebca0af04cb.jpg" alt="Strategic Support" />
             <div className="card-overlay">
               <h4>Strategic Support</h4>
               <div className="card-hover-content">

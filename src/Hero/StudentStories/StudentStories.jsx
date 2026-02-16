@@ -44,7 +44,6 @@ My favorite solution in the market. We work 5x faster with Ryleni.
                   <h4>Ramakrishnan K</h4>
                   <p>B.Com International Finance and Accounting with ACCA, UK</p>
                 </div>
-                <img className="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Deshaw-logo.svg" alt="Company" />
               </div>
             </div>
           </div>
@@ -67,7 +66,7 @@ I know it's cliche, but we were lost before we found Ryleni. Can't thank you guy
                   <h4>Akshara Sasikumar</h4>
                   <p>B.Com Corporate Accounting</p>
                 </div>
-                <img className="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Morgan_Stanley_Logo_1.svg" alt="Company" />
+               
               </div>
             </div>
           </div>
@@ -91,7 +90,7 @@ SO SO SO HAPPY WE FOUND YOU GUYS!!!! I'd bet you've saved me 100 hours so far.
                   <h4>Namitha Suresh</h4>
                   <p>M.Com International Finance and Accounting with ACCA, UK</p>
                 </div>
-                <img className="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/PwC_logo.svg" alt="Company" />
+                
               </div>
             </div>
           </div>
@@ -114,7 +113,7 @@ SO SO SO HAPPY WE FOUND YOU GUYS!!!! I'd bet you've saved me 100 hours so far.
                   <h4>Sajeesh S.J</h4>
                   <p>B.Com International Finance and Accounting with ACCA, UK</p>
                 </div>
-                <img className="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/EY_logo_2019.svg" alt="Company" />
+               
               </div>
             </div>
           </div>

@@ -25,7 +25,7 @@ body {
 .admissions-section {
   width: 100%;
   padding: 2.5rem 0;
-  background: #000;
+background: linear-gradient(135deg, #010205 0%, #080e21 50%, #080419 100%);
 }
 
 /* ================= CONTAINER ================= */
